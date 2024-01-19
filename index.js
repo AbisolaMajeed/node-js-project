@@ -6,6 +6,11 @@ dotenv.config();
 const express = require("express");
 const app = express();
 
+const initializeDatabase = require("./dummy-queries/initialize-database.js");
+
+// Call the dummy table handler
+initializeDatabase;
+
 app.get("/", (req, res) => {
   res.send("Welcome, Abitop!");
 });
